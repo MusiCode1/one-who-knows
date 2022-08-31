@@ -15,16 +15,17 @@
 
 ```js
 
+
 (function one_who_knows() {
 
     /** create by @MusiCode1 **/
 
     const
-        words = {
+        conjunctions = {
             who_knows: "מי יודע",
             i_know: "אני יודע"
         },
-        number = [
+        items = [
             "",
             ["אחד", "אלוקינו שבשמים ובארץ"],
             ["שניים", "לוחות הברית", "שני"],
@@ -41,20 +42,20 @@
             ["שלושה עשר", "מידיא"],
         ];
 
-    for (let index = 1; index < number.length; index++) {
+    for (let i = 1; i < items.length; i++) {
 
-        const [num,] = number[index];
+        const [num_name,] = items[i];
 
-        console.log(num, words.who_knows, num, words.i_know);
+        console.log(num_name, conjunctions.who_knows, num_name, conjunctions.i_know);
 
-        for (let index2 = index; index2 > 0; index2--) {
+        for (let i_repeat = i; i_repeat > 0; i_repeat--) {
 
-            let [num, item] = number[index2];
+            let [num_name, item] = items[i_repeat];
 
-            if (index2 === 2) num = number[index2][2];
+            if (i_repeat === 2) num_name = items[i_repeat][2];
 
-            console.log(num, item);
+            console.log(num_name, item);
         }
     }
-})()
+})();
 ```
